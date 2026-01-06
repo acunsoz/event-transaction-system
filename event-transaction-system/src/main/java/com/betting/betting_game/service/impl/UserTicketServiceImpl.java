@@ -1,5 +1,6 @@
 package com.betting.betting_game.service.impl;
 
+import org.springframework.transaction.annotation.Transactional;
 import com.betting.betting_game.model.dto.TicketMailSendRequest;
 import com.betting.betting_game.model.dto.UserTicketRequest;
 import com.betting.betting_game.model.entity.*;
