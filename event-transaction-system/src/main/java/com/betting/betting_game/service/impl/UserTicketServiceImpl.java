@@ -25,6 +25,7 @@ public class UserTicketServiceImpl implements UserTicketService {
     private final EmailService emailService;
 
     @Override
+    @Transactional
     public UserTicket createUserTicket(UserTicketRequest userTicketRequest) {
 
         User user = userRepository.findByMail(userTicketRequest.getMail())
@@ -59,6 +60,7 @@ public class UserTicketServiceImpl implements UserTicketService {
     }
 
     @Override
+    @Transactional
     public void processUserTicket(Long userTicketId) {
 
         UserTicket userTicket = userTicketRepository.findById(userTicketId)
